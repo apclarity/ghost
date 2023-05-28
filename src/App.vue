@@ -1,4 +1,44 @@
 <script setup>
+import {ref} from 'vue'
+const img = [
+  {
+    url: new URL('/src/assets/carbon (1).png', import.meta.url).href,
+    text: "ppppp"
+  },
+  {
+    url: new URL('../public/assets/carbon (1).png', import.meta.url).href,
+    text: "ppppp"
+  },
+  {
+    url: new URL('../public/assets/carbon (1).png', import.meta.url).href,
+    text: "ppppp"
+  },
+  {
+    url: new URL('../public/assets/carbon (1).png', import.meta.url).href,
+    text: "ppppp"
+  },
+]
+
+// const img = [
+//   {
+//     url: new URL('@/public/assets/carbon (1).png', import.meta.url).href,
+//     text: "ppppp"
+//   },
+//   {
+//     url: new URL('/src/assets/carbon (10).png', import.meta.url).href,
+//     text: "ppppp"
+//   },
+//   {
+//     url: new URL('../public/assets/carbon (1).png', import.meta.url).href,
+//     text: "ppppp"
+//   },
+//   {
+//     url: new URL('../public/assets/carbon (1).png', import.meta.url).href,
+//     text: "ppppp"
+//   },
+// ]
+console.log(img)
+
 </script>
 
 <template>
@@ -54,6 +94,12 @@
     </div>
     <div class="bg-amber-500 flex items-center justify-center mb-10">
       <span class="text-black">kanan</span>
+    </div>
+  </div>
+  <div>
+    <div class="" v-for="p in img" :key="p">
+      <img :src="p.url" alt="">
+      <!-- <span>{{ p.text }}</span> -->
     </div>
   </div>
   <!-- Footer -->
